@@ -7,8 +7,8 @@ This project was developped as part of a code exercise issued by [Simpplr]: http
 
 ## Live Demo
 
-* [master branch]: http://www.paulwroe.me/simpplr-calendar-exercise/demo-master/
-* [with-router branch]: http://www.paulwroe.me/simpplr-calendar-exercise/demo-with-router/
+* [Without Router](http://www.paulwroe.me/simpplr-calendar-exercise/demo-master/)
+* [With Router](http://www.paulwroe.me/simpplr-calendar-exercise/demo-with-router/)
 
 ## Build/Run
 ```
