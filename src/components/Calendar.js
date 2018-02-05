@@ -8,87 +8,86 @@ import Title from './Title';
 
 class Calendar extends Component {
 
-	constructor() {
+	constructor(props) {
 		
-		super();
-            
-        this.state = {
-            month: new Date().getMonth(), 
-            year: new Date().getFullYear(),
-        };
+		super(props);
+
+        if( this.props.location.hash) {
+
+            this.year = this.props.location.hash.split('/')[1];
+
+            this.month = this.props.location.hash.split('/')[2];
+
+        } else {
+
+            this.year =  new Date().getFullYear();
+
+            this.month = new Date().getMonth();
+
+        }
 
 	}
 
 	_handleNextMonth() {
 
-       	let nextMonth;
-
-        if (this.state.month == 11) {
+        if (this.month == 11) {
         	
-            nextMonth = 0;
+            this.month = 0;
         
         } else {
 
-        	nextMonth = this.state.month + 1;
+            this.month += 1;
 
         }
 
-        this.setState({
-        	month: nextMonth
-        });
+        this.props.history.replace(`/#/${this.year}/${this.month}`);
 
     }
 
     _handlePreviousMonth() {
-       	
-       	let previousMonth;
 
-        if (this.state.month === 0) {
+        if (this.month === 0) {
 
-        	previousMonth = 11;
+        	this.month = 11;
 
         } else {
 
-        	previousMonth = this.state.month - 1;
+        	this.month -= 1;
 
         }
 
-        this.setState({
-        	month: previousMonth
-        });
+        this.props.history.replace(`/#/${this.year}/${this.month}`);
 
     }
 
     _handleYearChange(event) {
 
-        this.setState({
-            year: event.target.value
-        });
+        this.year = event.target.value;
+
+        this.props.history.replace(`/#/${this.year}/${this.month}`);
 
     }
 
     _handleMonthChange(event) {
 
-        this.setState({
-            month: event.target.value
-        });
+        this.month = event.target.value;
+
+        this.props.history.replace(`/#/${this.year}/${this.month}`);
 
     }
 
     render() {
 
-        const { year, month } = this.state;
-
         return (
         	<div className='container'>
-        		
+
                 <Title
-                    month={ month }
-        			year={ year } />
+                    month={ this.month }
+        			year={ this.year } />
 
                 <Controls
-                    year={ year }
-                    month={ month }
+                    year={ this.year }
+                    month={ this.month }
                     handleMonthChange={ this._handleMonthChange.bind(this) }
                     handleYearChange={ this._handleYearChange.bind(this) }
         			handleNextMonth={ this._handleNextMonth.bind(this) }
@@ -97,8 +96,8 @@ class Calendar extends Component {
                 <Header />
 
         		<Grid
-                    month={ month }
-                    year={ year } />
+                    month={ this.month }
+                    year={ this.year } />
 
         	</div>
         );

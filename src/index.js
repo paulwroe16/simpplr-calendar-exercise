@@ -2,9 +2,9 @@ import React, {Component} from "react";
 import ReactDOM from 'react-dom';
 
 //	Components
-import Calendar from './components/Calendar';
+import App from './components/App';
 
 ReactDOM.render(
-	<Calendar />,
+	<App />,
 	document.getElementById('main')
 );
