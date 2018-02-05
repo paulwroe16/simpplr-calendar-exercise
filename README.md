@@ -7,12 +7,12 @@ This project was developped as part of a code exercise issued by [Simpplr](https
 
 ## Live Demo
 
-* [Without Router](http://www.paulwroe.me/simpplr-calendar-exercise/demo-master/)
-* [With Router](http://www.paulwroe.me/simpplr-calendar-exercise/demo-with-router/)
+* [Demo](http://www.paulwroe.me/simpplr-calendar-exercise/demo-master/)
 
 ## Build/Run
 ```
 > npm install
+> webpack 
 > npm start
 ```
 
