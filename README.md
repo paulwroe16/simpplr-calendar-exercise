@@ -7,7 +7,7 @@ This project was developped as part of a code exercise issued by [Simpplr](https
 
 ## Live Demo
 
-* [Demo](http://www.paulwroe.me/simpplr-calendar-exercise/demo-master/)
+* [Demo (without router)](http://www.paulwroe.me/simpplr-calendar-exercise/demo-master/)
 
 ## Build/Run
 ```
@@ -15,4 +15,3 @@ This project was developped as part of a code exercise issued by [Simpplr](https
 > webpack 
 > npm start
 ```
-
