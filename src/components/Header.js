@@ -6,9 +6,9 @@ import letters from '../data/letters';
 
 class Header extends Component {
 
-    constructor() {
+    constructor(props) {
         
-        super();
+        super(props);
 
         this.letters = letters;
 

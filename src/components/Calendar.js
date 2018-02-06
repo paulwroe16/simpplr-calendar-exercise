@@ -8,9 +8,9 @@ import Title from './Title';
 
 class Calendar extends Component {
 
-	constructor() {
+	constructor(props) {
 		
-		super();
+		super(props);
             
         this.state = {
             month: new Date().getMonth(), 
