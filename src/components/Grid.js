@@ -6,9 +6,9 @@ import Day from './Day';
 
 class Grid extends Component {
 
-    constructor() {
+    constructor(props) {
 
-        super();
+        super(props);
 
         this.keyCount = 0;
 

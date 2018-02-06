@@ -7,9 +7,9 @@ import months from '../data/months';
 
 class Controls extends Component {
 
-    constructor() {
+    constructor(props) {
 
-        super();
+        super(props);
 
         this.years = years;
 
